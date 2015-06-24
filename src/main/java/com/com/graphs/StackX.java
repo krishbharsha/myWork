@@ -14,7 +14,23 @@ public class StackX {
         top = -1;
     }
 
-    public void push(int j){
-
+    public void push(int j) {
+        st[++top] = j;
     }
+
+    public int pop() {
+        return st[--top];
+    }
+
+    public int peek() {
+//        if( top ==-1){
+//            return -1;
+//        }
+        return st[top];
+    }
+
+    public boolean isEmpty() {
+        return (top == -1);
+    }
+
 }
