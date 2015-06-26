@@ -1,4 +1,4 @@
-package com.com.graphs;
+package com.graphs;
 
 /**
  * Created by ksharma on 6/23/15.
