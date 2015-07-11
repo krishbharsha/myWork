@@ -46,6 +46,10 @@ public class MultiplyNoDivide {
             array[i] = storeTempResult[0][i]*storeTempResult[i+1][array.length-1];
         }
 
+        StringBuffer sb = new StringBuffer();
+
+        sb.append("a");
+
         return array;
     }
 }
