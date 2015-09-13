@@ -1,5 +1,7 @@
 package com.mywork;
 
+import java.util.PriorityQueue;
+
 /**
  * Created by ksharma on 6/13/15.
  *
@@ -16,6 +18,10 @@ public class InsertionSort {
         intArray = new int[]{25, 35, 5, 10, 17, 1098, 220, 62872, 882, 12, 10, 22, 1182, 11, 12, 5, 12};
 
         insertionSort();
+
+        PriorityQueue<Integer> minHeap = new PriorityQueue<>();
+
+
 
     }
 

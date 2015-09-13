@@ -1,5 +1,8 @@
 package com.graphs;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+
 /**
  * Created by ksharma on 6/23/15.
  */
@@ -39,7 +42,7 @@ public class StackGraph {
         displayVertex(0);
         theStack.push(0);
 
-        while( !theStack.isEmpty()) {
+        while (!theStack.isEmpty()) {
             int v = getAdjUnvisitedVertex(theStack.peek());
             if (v == -1) {
                 theStack.pop();
@@ -51,19 +54,49 @@ public class StackGraph {
         }
 
         //reset the was visted flag as the stack is displayed.
-        for (int m =0; m<nVerts; m++){
+        for (int m = 0; m < nVerts; m++) {
             vertexList[m].wasVisited = false;
         }
 
     }
 
-    public int getAdjUnvisitedVertex(int v){
-        for(int n=0; n<nVerts; n++){
-            if(adjMat[v][n] == 1 && vertexList[n].wasVisited ==false){
+    public void evenTree() {
+        vertexList[0].wasVisited = true;
+        //displayVertex(0);
+        theStack.push(0);
+        int total=0;
+        int count =0;
+
+        while (!theStack.isEmpty()) {
+            int v = getAdjUnvisitedVertex(theStack.peek());
+            if (v == -1) {
+                theStack.pop();
+//                if(count>0 && count %2 ==0){
+//                    total++;
+//                }
+            } else {
+                vertexList[v].wasVisited = true;
+                //displayVertex(v);
+                theStack.push(v);
+                count++;
+            }
+        }
+
+        //reset the was visted flag as the stack is displayed.
+        for (int m = 0; m < nVerts; m++) {
+            vertexList[m].wasVisited = false;
+        }
+
+    }
+
+    public int getAdjUnvisitedVertex(int v) {
+        for (int n = 0; n < nVerts; n++) {
+            if (adjMat[v][n] == 1 && vertexList[n].wasVisited == false) {
                 return n;
             }
-
         }
+
+
         return -1;
     }
 

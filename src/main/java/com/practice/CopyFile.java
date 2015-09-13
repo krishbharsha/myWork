@@ -36,6 +36,7 @@ public class CopyFile {
     public static void CreateDir() {
         String dirname = "/tmp/user/java/bin";
         File d = new File(dirname);
+
         // Create directory now.
         d.mkdirs();
     }

@@ -15,6 +15,19 @@ public class Pangrams {
 
         String sen = scan.nextLine();
 
+        scan.nextBigDecimal();
+
+        String[] str = new String[10];
+
+        int len = str.length;
+
+        float a =0f;
+
+        int[] intArray = new int[10];
+
+        int len1 = intArray.length;
+
+
         for (int m = 0; m < sen.length(); m++) {
 
             if (alpha.size() != 27) {
